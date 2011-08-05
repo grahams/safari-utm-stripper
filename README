@@ -1,0 +1,5 @@
+Safari extension that strips Google Analytics (i.e. Urchin Traffic Monitor)
+tokens from URL query strings.
+
+Based on the work of Jon Parise:
+https://github.com/jparise/chrome-utm-stripper
