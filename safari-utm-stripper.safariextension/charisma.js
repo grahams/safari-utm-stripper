@@ -6,7 +6,7 @@ var queryStringIndex = url.indexOf('?');
 
 if (url.indexOf('utm_') > queryStringIndex) {
     var stripped = url.replace(
-        /([\?\&]utm_(source|medium|campaign|content)=[^&#]+)/ig,
+        /([\?\&]utm_(source|medium|term|campaign|content)=[^&#]+)/ig,
         '');
     if (stripped.charAt(queryStringIndex) === '&') {
         stripped = stripped.substr(0, queryStringIndex) + '?' +

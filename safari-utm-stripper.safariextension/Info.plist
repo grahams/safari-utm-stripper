@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>Sean Graham</string>
 	<key>Builder Version</key>
-	<string>7534.48.3</string>
+	<string>7534.49</string>
 	<key>CFBundleDisplayName</key>
 	<string>UTM Stripper</string>
 	<key>CFBundleIdentifier</key>
@@ -13,7 +13,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.1</string>
+	<string>1.2</string>
 	<key>CFBundleVersion</key>
 	<string>2</string>
 	<key>Chrome</key>
@@ -31,8 +31,6 @@
 			</array>
 		</dict>
 	</dict>
-	<key>Description</key>
-	<string>Strips Google Analytics (UTM) tokens from URL query strings</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
