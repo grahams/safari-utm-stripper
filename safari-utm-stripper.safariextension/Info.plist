@@ -25,10 +25,6 @@
 	<dict>
 		<key>Scripts</key>
 		<dict>
-			<key>End</key>
-			<array>
-				<string>charisma.js</string>
-			</array>
 			<key>Start</key>
 			<array>
 				<string>charisma.js</string>
