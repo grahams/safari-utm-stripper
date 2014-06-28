@@ -13,7 +13,7 @@ if (url.indexOf('utm_') > queryStringIndex) {
             stripped.substr(queryStringIndex + 1)
     }
     if (stripped != url) {
-        window.location = stripped;
+        history.replaceState(null, window.title, stripped);
     }
 }
 
