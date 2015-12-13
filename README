@@ -1,11 +1,17 @@
-Safari extension that strips Google Analytics (i.e. Urchin Traffic Monitor)
-tokens from URL query strings.
+Safari extension that strips tracking tokens from the following services:
+
+* Google Analytics (i.e. Urchin Traffic Monitor)
+* Youtube
+* Mailchimp
 
 The Google Analytics query string parameters are documented here:
 http://www.google.com/support/analytics/bin/answer.py?answer=55578
 
 Based on the work of Jon Parise:
 https://github.com/jparise/chrome-utm-stripper
+
+as well as the work of Mihai Parparita:
+https://github.com/mihaip/utm-stripper
 
 Urchin logo by Jordan Irwin / Deluge
 http://www.openclipart.org/detail/69997
