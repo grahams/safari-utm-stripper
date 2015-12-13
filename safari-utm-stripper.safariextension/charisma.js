@@ -16,7 +16,7 @@ function getStrippedUrl(url) {
     // Strip YouTube parameters
     if((url.indexOf('http://www.youtube.com/watch') === 0) ||
        (url.indexOf('https://www.youtube.com/watch') === 0) ) {
-        url = url.replace(/([\?\&](feature|app|ac)=[^&#]*)/ig, '');
+        url = url.replace(/([\?\&](feature|app|ac|src_vid|annotation_id)=[^&#]*)/ig, '');
     }
 
     if (url.charAt(queryStringIndex) === '&') {
