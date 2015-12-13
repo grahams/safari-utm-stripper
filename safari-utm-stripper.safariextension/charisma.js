@@ -1,20 +1,41 @@
+function getStrippedUrl(url) {
+    var queryStringIndex = url.indexOf('?');
+
+    if (url.indexOf('utm_') > queryStringIndex) {
+        url = url.replace(
+            /([\?\&]utm_(reader|source|medium|term|campaign|content)=[^&#]+)/ig,
+            '');
+    }
+
+    // Strip MailChimp parameters
+    if((url.indexOf('mc_eid') > url.indexOf('?')) || 
+       (url.indexOf('mc_cid') > url.indexOf('?')) ) {
+        url = url.replace(/([\?\&](mc_cid|mc_eid)=[^&#]+)/ig, '');
+    }
+
+    // Strip YouTube parameters
+    if((url.indexOf('http://www.youtube.com/watch') === 0) ||
+       (url.indexOf('https://www.youtube.com/watch') === 0) ) {
+        url = url.replace(/([\?\&](feature|app|ac)=[^&#]*)/ig, '');
+    }
+
+    if (url.charAt(queryStringIndex) === '&') {
+        url = url.substr(0, queryStringIndex) + '?' +
+            url.substr(queryStringIndex + 1);
+    }
+
+    return url;
+}
 
 (function() {
-var url = window.location.href;
 
-var queryStringIndex = url.indexOf('?');
+    var url = getStrippedUrl(window.location.href);
 
-if (url.indexOf('utm_') > queryStringIndex) {
-    var stripped = url.replace(
-        /([\?\&]utm_(source|medium|term|campaign|content)=[^&#]+)/ig,
-        '');
-    if (stripped.charAt(queryStringIndex) === '&') {
-        stripped = stripped.substr(0, queryStringIndex) + '?' +
-            stripped.substr(queryStringIndex + 1)
+    if(url !== window.location.href) {
+        history.replaceState(null, null, url);
     }
-    if (stripped != url) {
-        history.replaceState(null, null, stripped);
+    else {
+        return;
     }
-}
 
 })();

@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>Sean Graham</string>
 	<key>Builder Version</key>
-	<string>9537.76.4</string>
+	<string>11601.3.9</string>
 	<key>CFBundleDisplayName</key>
 	<string>UTM Stripper</string>
 	<key>CFBundleIdentifier</key>
@@ -13,9 +13,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0</string>
+	<string>2.0.3</string>
 	<key>CFBundleVersion</key>
-	<string>4</string>
+	<string>7</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Global Page</key>
@@ -33,6 +33,8 @@
 	</dict>
 	<key>Description</key>
 	<string>Strips Google Analytics (i.e. Urchin Traffic Monitor) tokens from URL query strings.</string>
+	<key>DeveloperIdentifier</key>
+	<string>J3Q79T636D</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
