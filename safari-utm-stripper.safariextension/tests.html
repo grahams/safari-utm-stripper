@@ -41,20 +41,21 @@
     }
 
     var TEST_DATA = {
-      'http://example.com/post': 'http://example.com/post',
-      'http://example.com/post?foo=bar': 'http://example.com/post?foo=bar',
-      'http://example.com/post?utm_source=src&utm_medium=medium&utm_campaign=campaign&utm_reader=feedly': 'http://example.com/post',
-      'http://example.com/post?mc_cid=1234&mc_eid=4321': 'http://example.com/post',
-      'http://example.com/post?foo=bar&utm_source=src': 'http://example.com/post?foo=bar',
-      'http://example.com/post?utm_source=src&foo=bar': 'http://example.com/post?foo=bar',
-      'http://example.com/post?utm_source=src#foo=bar': 'http://example.com/post#foo=bar',
+        'http://example.com/post': 'http://example.com/post',
+        'http://example.com/post?foo=bar': 'http://example.com/post?foo=bar',
+        'http://example.com/post?utm_source=src&utm_medium=medium&utm_campaign=campaign&utm_reader=feedly': 'http://example.com/post',
+        'http://example.com/post?mc_cid=1234&mc_eid=4321': 'http://example.com/post',
+        'http://example.com/post?foo=bar&utm_source=src': 'http://example.com/post?foo=bar',
+        'http://example.com/post?utm_source=src&foo=bar': 'http://example.com/post?foo=bar',
+        'http://example.com/post?utm_source=src#foo=bar': 'http://example.com/post#foo=bar',
 
-      'https://www.youtube.com/watch?v=YlGqN3AKOsA&feature=kp': 'https://www.youtube.com/watch?v=YlGqN3AKOsA',
-      'https://www.youtube.com/watch?feature=youtu.be&v=YlGqN3AKOsA': 'https://www.youtube.com/watch?v=YlGqN3AKOsA',
-      'http://www.youtube.com/watch?v=YlGqN3AKOsA&feature=kp': 'http://www.youtube.com/watch?v=YlGqN3AKOsA',
-      'http://www.youtube.com/watch?v=YlGqN3AKOsA&app=desktop': 'http://www.youtube.com/watch?v=YlGqN3AKOsA',
-      'http://www.youtube.com/watch?v=YlGqN3AKOsA&feature=kp&app=desktop': 'http://www.youtube.com/watch?v=YlGqN3AKOsA',
-      'http://www.youtube.com/watch?app=desktop&v=YlGqN3AKOsA': 'http://www.youtube.com/watch?v=YlGqN3AKOsA',  
+        'https://www.youtube.com/watch?v=YlGqN3AKOsA&feature=kp': 'https://www.youtube.com/watch?v=YlGqN3AKOsA',
+        'https://www.youtube.com/watch?feature=youtu.be&v=YlGqN3AKOsA': 'https://www.youtube.com/watch?v=YlGqN3AKOsA',
+        'http://www.youtube.com/watch?v=YlGqN3AKOsA&feature=kp': 'http://www.youtube.com/watch?v=YlGqN3AKOsA',
+        'http://www.youtube.com/watch?v=YlGqN3AKOsA&app=desktop': 'http://www.youtube.com/watch?v=YlGqN3AKOsA',
+        'http://www.youtube.com/watch?v=YlGqN3AKOsA&feature=kp&app=desktop': 'http://www.youtube.com/watch?v=YlGqN3AKOsA',
+        'http://www.youtube.com/watch?app=desktop&v=YlGqN3AKOsA': 'http://www.youtube.com/watch?v=YlGqN3AKOsA',  
+        'https://www.youtube.com/watch?v=3OHBlPvK9Ek&src_vid=4KHCkXN2F8I&annotation_id=annotation_1193924099': 'https://www.youtube.com/watch?v=3OHBlPvK9Ek',
     }
 
     function runTests() {
