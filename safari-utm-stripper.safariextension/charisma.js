@@ -27,15 +27,16 @@ function getStrippedUrl(url) {
     return url;
 }
 
-(function() {
+(function(window) {
+    document.addEventListener("DOMContentLoaded", function() {
+        var originalURL = window.top.location.href;
+        var url = getStrippedUrl(originalURL);
 
-    var url = getStrippedUrl(window.location.href);
-
-    if(url !== window.location.href) {
-        history.replaceState(null, null, url);
-    }
-    else {
-        return;
-    }
-
-})();
+        if(url !== originalURL) {
+            window.top.history.replaceState(null, null, url);
+        }
+        else {
+            return;
+        }
+    });
+})(this);
