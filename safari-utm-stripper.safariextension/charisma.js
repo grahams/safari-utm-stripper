@@ -8,8 +8,8 @@ function getStrippedUrl(url) {
     }
 
     // Strip MailChimp parameters
-    if((url.indexOf('mc_eid') > url.indexOf('?')) || 
-       (url.indexOf('mc_cid') > url.indexOf('?')) ) {
+    if((url.indexOf('mc_eid') > queryStringIndex) ||
+       (url.indexOf('mc_cid') > queryStringIndex) ) {
         url = url.replace(/([\?\&](mc_cid|mc_eid)=[^&#]+)/ig, '');
     }
 
