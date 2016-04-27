@@ -19,6 +19,17 @@ function getStrippedUrl(url) {
         url = url.replace(/([\?\&](feature|app|ac|src_vid|annotation_id)=[^&#]*)/ig, '');
     }
 
+    // Strip Yandex openstat parameters
+    if (url.indexOf('_openstat') > url.indexOf('?')) {
+        url = url.replace(/([\?\&]_openstat=[^&#]+)/ig, '');
+    }
+
+    // Strip HubSpot parameters
+    if((url.indexOf('_hsenc') > url.indexOf('?')) || 
+       (url.indexOf('_hsmi') > url.indexOf('?')) ) {
+        url = url.replace(/([\?\&](_hsenc|_hsmi)=[^&#]+)/ig, '');
+    }
+
     if (url.charAt(queryStringIndex) === '&') {
         url = url.substr(0, queryStringIndex) + '?' +
             url.substr(queryStringIndex + 1);
