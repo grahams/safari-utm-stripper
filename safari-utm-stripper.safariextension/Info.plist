@@ -5,7 +5,7 @@
 	<key>Author</key>
 	<string>Sean Graham</string>
 	<key>Builder Version</key>
-	<string>11601.3.9</string>
+	<string>11601.5.17.1</string>
 	<key>CFBundleDisplayName</key>
 	<string>UTM Stripper</string>
 	<key>CFBundleIdentifier</key>
@@ -13,9 +13,9 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0.4</string>
+	<string>2.0.5</string>
 	<key>CFBundleVersion</key>
-	<string>8</string>
+	<string>9</string>
 	<key>Chrome</key>
 	<dict>
 		<key>Global Page</key>
