@@ -39,15 +39,15 @@ function getStrippedUrl(url) {
 }
 
 (function(window) {
-    document.addEventListener("DOMContentLoaded", function() {
-        var originalURL = window.top.location.href;
+    safari.application.addEventListener("beforeNavigate", function (info) {
+        var originalURL = info.url;
         var url = getStrippedUrl(originalURL);
 
         if(url !== originalURL) {
-            window.top.history.replaceState(null, null, url);
+            safari.application.activeBrowserWindow.activeTab.url = url;
         }
         else {
             return;
         }
-    });
+    }, false);
 })(this);
