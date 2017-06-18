@@ -1,6 +1,7 @@
 function getStrippedUrl(url) {
     var queryStringIndex = url.indexOf('?');
 
+    // Google Analytics (Urchin Tracking Monitor/UTM)
     if (url.indexOf('utm_') > queryStringIndex) {
         url = url.replace(
             /([\?\&]utm_(reader|source|medium|term|campaign|content)=[^&#]+)/ig,
@@ -39,12 +40,18 @@ function getStrippedUrl(url) {
 }
 
 (function(window) {
-    safari.application.addEventListener("beforeNavigate", function (info) {
-        var originalURL = info.url;
+    safari.application.addEventListener("beforeNavigate", function (e) {
+        var originalURL = e.url;
+
+        if(!originalURL) {
+            return;
+        }
+
         var url = getStrippedUrl(originalURL);
 
         if(url !== originalURL) {
-            safari.application.activeBrowserWindow.activeTab.url = url;
+            e.preventDefault();
+            e.target.url = url;
         }
         else {
             return;
