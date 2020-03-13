@@ -1,5 +1,11 @@
 # Apple has put a bullet in JS extensions, so this project is dead.
 
+Github user [@Sh1d0w](https://github.com/Sh1d0w/) has created an alternative to this project using Safari App Extensions.  I haven't tried it yet, but you can find it over here: 
+
+https://github.com/Sh1d0w/clean-links
+
+# Classic README Contents:
+
 Safari extension that strips tracking tokens from the following services:
 
 * Google Analytics (i.e. Urchin Traffic Monitor)
